@@ -61,7 +61,7 @@ RUN curl -sL --retry 3 \
  && chown -R root:root $SPARK_HOME
  
 COPY requirement.txt .
-RUN pip install -r requirement.txt
+RUN python -m pip install -r requirement.txt
 
 WORKDIR $SPARK_HOME
 CMD ["bin/spark-class", "org.apache.spark.deploy.master.Master"]
