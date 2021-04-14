@@ -1,0 +1,3 @@
+eacyocr
+jupyterlab
+kubeflow-kale
