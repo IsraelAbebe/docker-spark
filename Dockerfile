@@ -60,7 +60,9 @@ RUN curl -sL --retry 3 \
  && mv /usr/$SPARK_PACKAGE $SPARK_HOME \
  && chown -R root:root $SPARK_HOME
  
-COPY requirement.txt .
+COPY requirement.txt /tmp
+
+WORKDIR /tmp
 RUN python -m pip install -r requirement.txt
 
 WORKDIR $SPARK_HOME
