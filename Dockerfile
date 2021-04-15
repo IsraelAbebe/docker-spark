@@ -1,4 +1,4 @@
-FROM jupyter/pyspark-notebook#:latest
+FROM jupyter/pyspark-notebook:latest
 
 
 
